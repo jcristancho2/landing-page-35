@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.main-container {
+    display: grid;
+    grid-template:
+        "image-section "
+        "text-section";
+    align-items: center;
+    margin: 0 15px 15px 15px;
+}
+
+.text-section {
+    grid-area: text-section;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.image-section {
+    grid-area: image-section;
+    text-align: center;
+    position: relative;
+    height: 400px;
+}
+
+.main-image {
+    width: 60%;
+    position: absolute;
+    left: 25%;
+    z-index: 2;
+}
+
+.decor-star {
+    position: absolute;
+    top: 12%;
+    left: 12%;
+    width: 45%;
+}
+
+.decor-sparkle {
+    position: absolute;
+    bottom: 10%;
+    right: 1%;
+    width: 20%;
+}
+
+.decor-accent {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 40%;
+}
+
+.highlight {
+    color: #e3b635;
+}
+
+.stats-container {
+    display: flex;
+    gap: 1px;
+}
+
+.stat-item {
+    padding: 10px;
+    background-color: #242424;
+    border-radius: 20px;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.stat-item img {
+    width: 20%;
+}
+
+.stat-item p,
+h2 {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    background-color: #e3b635;
+    text-align: center;
+    color: black;
+    padding: 15px;
+    width: 50%;
+    border-radius: 20px;
+}
+
+hr {
+    height: 5px;
+    background-color: black;
+}
+
+@media (min-width: 750px) {
+    .main-container {
+        grid-template: "text-section image-section";
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0 5% 1% 5%;
+    }
+
+    .text-section {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+    }
+
+    .image-section {
+        width: 100vh;
+        height: 100vh;
+    }
+
+    .decor-star {
+        top: 12%;
+    }
+
+    .decor-sparkle {
+        bottom: 10%;
+    }
+
+    .stats-container {
+        gap: 5%;
+        text-align: center;
+        margin-top: 10%;
+    }
+}
